@@ -7,7 +7,7 @@ typedef float * p_float;
 
 matriz generar_matriz(int m, int n);
 void liberar_matriz(matriz p,int m, int n);
-void leer_matriz(matriz p,int m,int n);
+void leer_matriz(matriz p,int m,int n,char name);
 void mostrar_matriz(matriz p,int m,int n);
 void rellenar_aleatoriamente(matriz A,int r,int c);
 void linea();
@@ -51,11 +51,12 @@ void liberar_matriz(matriz p,int m, int n){
 	free(p);
 }
 
-void leer_matriz(matriz p,int m,int n){
+void leer_matriz(matriz p,int m,int n,char name){
 	int i,j;
+	
 	for(i=0;i<m;i++){
 		for(j=0;j<n;j++){
-			printf("p[%d][%d]",i,j);
+			printf("\n\t%c[%d][%d]: ",name,i,j);
 			scanf("%f", &(p[i][j]));
 			//otras formas de hacer lo mismo
 			//scanf("%d", p[i]+j);
@@ -67,6 +68,7 @@ void leer_matriz(matriz p,int m,int n){
 
 void mostrar_matriz(matriz p,int m,int n){
 	int i,j;
+	printf("\n\t");
 	for(i=0;i<m;i++){
 		for(j=0;j<n;j++){
 			printf("%.3f\t", p[i][j]);
@@ -74,7 +76,7 @@ void mostrar_matriz(matriz p,int m,int n){
 			//scanf("%d", p[i]+j);
 			//scanf("%d", *(p+i)+j );
 		}
-		printf("\n\n\t");
+		printf("\n\t");
 	}
 }
 
@@ -89,4 +91,12 @@ void rellenar_aleatoriamente(matriz A,int r,int c){
 		aleatorio = rand() % 10;
 		A[i][j] = aleatorio;
 	}
+}
+
+void copiarMatriz(matriz A,matriz B,int m,int n){
+	//this function copy the content of A in B
+	int i,j;
+	for(i = 0;i<m;i++)
+		for(j=0;j<n;j++)
+		B[i][j] = A[i][j];
 }

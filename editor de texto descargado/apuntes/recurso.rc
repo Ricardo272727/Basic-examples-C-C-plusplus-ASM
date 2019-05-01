@@ -1,0 +1,193 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish (Castilian) (unknown sub-lang: 0x8) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESV)
+#ifdef _WIN32
+LANGUAGE LANG_SPANISH, 0x8
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&Archivo"
+    BEGIN
+        MENUITEM "&Nuevo documento\tCtrl+N",    ID_ARCHIVO_NUEVODOCUMENTO
+        MENUITEM "Abrir documento...\tCtrl+O",  ID_ARCHIVO_ABRIRDOCUMENTO
+        MENUITEM "Guardar documento\tCtrl+G",   ID_ARCHIVO_GUARDARDOCUMENTO
+        MENUITEM "Guardar como...",             ID_ARCHIVO_GUARDARCOMO
+        MENUITEM SEPARATOR
+        MENUITEM "Configurar impresión",        ID_ARCHIVO_CONFIGURARIMPRESIN
+
+        MENUITEM "Imprimir documento\tCtrl+I",  ID_ARCHIVO_IMPRIMIRDOCUMENTO
+        MENUITEM SEPARATOR
+        MENUITEM "Salir\tCtrl+S",               ID_ARCHIVO_SALIR
+    END
+    POPUP "&Edición"
+    BEGIN
+        MENUITEM "&Deshacer\tCtrl+Z",           ID_EDICIN_DESHACER, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Cortar\tCtrl+X",             ID_EDICIN_CORTAR, GRAYED
+        MENUITEM "Co&piar\tCtrl+C",             ID_EDICIN_COPIAR, GRAYED
+        MENUITEM "&Pegar\tCtrl+P",              ID_EDICIN_PEGAR, GRAYED
+        MENUITEM "&Borrar\tSupr",               ID_EDICIN_BORRAR, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Buscar y reemplazar...\tCtrl+R", 
+                                                ID_EDICIN_BUSCARYREEMPLAZAR
+        , GRAYED
+        MENUITEM "&Seleccionar todo\tCtrl+A",   ID_EDICIN_SELECCIONARTODO
+        MENUITEM SEPARATOR
+        MENUITEM "Insertar &fecha y hora\tF5",  ID_EDICIN_INSERTARFECHAYHORA
+    END
+    POPUP "&Formato"
+    BEGIN
+        MENUITEM "Cambiar fuente del &texto",   ID_FORMATO_CAMBIARFUENTEDELTEXTO
+
+        MENUITEM "Cambiar color de &fondo",     ID_FORMATO_CAMBIARCOLORDEFONDO
+
+    END
+    POPUP "Ay&uda"
+    BEGIN
+        MENUITEM "&Contenido\tF1",              ID_AYUDA_CONTENIDO
+        MENUITEM SEPARATOR
+        MENUITEM "&Reportar errores",           ID_AYUDA_REPORTARERRORES
+        MENUITEM "&Enviar dudas o sugerencias", ID_AYUDA_ENVIARDUDASOSUGERENCIAS
+
+        MENUITEM SEPARATOR
+        MENUITEM "Acerca de...",                ID_AYUDA_ACERCADE
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+ICONO                   ICON    DISCARDABLE     "icon1.ico"
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "200a04b0"
+        BEGIN
+            VALUE "Comments", "Apuntes, editor de texto\0"
+            VALUE "CompanyName", "MundoC++ >> http://www.iespana.es/elmundoc/\0"
+            VALUE "FileDescription", "apuntes\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "apuntes\0"
+            VALUE "LegalCopyright", "Copyright © 2003 Humberto Suárez\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "apuntes.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "MundoC++ Apuntes versión 1.0.0 Freeware\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x200a, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+ACELERADORES ACCELERATORS DISCARDABLE 
+BEGIN
+    VK_F5,          ID_EDICIN_INSERTARFECHAYHORA, VIRTKEY, NOINVERT
+    "^B",           ID_EDICIN_BUSCARTEXTO,  ASCII,  NOINVERT
+    "^G",           ID_ARCHIVO_GUARDARDOCUMENTO, ASCII, NOINVERT
+    "\t",           ID_ARCHIVO_IMPRIMIRDOCUMENTO, ASCII, NOINVERT
+    "^N",           ID_ARCHIVO_NUEVODOCUMENTO, ASCII, NOINVERT
+    "^O",           ID_ARCHIVO_ABRIRDOCUMENTO, ASCII, NOINVERT
+    "^P",           ID_EDICIN_PEGAR,        ASCII,  NOINVERT
+    "^R",           ID_EDICIN_BUSCARYREEMPLAZAR, ASCII, NOINVERT
+    "^S",           ID_ARCHIVO_SALIR,       ASCII,  NOINVERT
+END
+
+#endif    // Spanish (Castilian) (unknown sub-lang: 0x8) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

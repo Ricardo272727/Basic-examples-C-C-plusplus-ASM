@@ -1,0 +1,3 @@
+Mi nombre es Ricardo ALejandro Segura Cuanalo y este es un archivo que fue creado en C 
+jajaja esto es como un editor de textos muy primitivo 
+hola estoy agrrando mas texto AL ARCHIVO 

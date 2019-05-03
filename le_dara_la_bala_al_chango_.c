@@ -1,25 +1,46 @@
 #include <stdio.h>
 #include <math.h>
+#define PI 3.14159
+
 int main(int argc, char *argv[]) {
-	float d,tetha,v0,t,y_chango,y_cazador,coseno_t,seno_t,tangente_t,pi=3.1415926536,factor;
-	printf("\nDame el angulo con el que apunta el cazador (grados): ");scanf("%f",&tetha);
-	 
-	/*
-	printf("\nHola!...\nDame la distancia del cazador al chango (metros): ");scanf("%f",&d);
-	printf("\nDame la velocidad de la bala al salir del rifle del cazador (m/s): ");scanf("%f",&v0);//8 40 20 t = 0.522 5.376m
-	*/
-	coseno_t = cos(tetha);
-	factor = 180/pi;
-	printf("coseno:%f, factor:%f",coseno_t,factor);
+	int aux_int;
+	float d,tetha,v0,t,y_chango,y_cazador,g = 9.81,aux;
+	printf("\nDistancia del objeto al canon: ");
+	scanf("%f",&d);
+	printf("\nAngulo del canon (grados): ");
+	scanf("%f",&tetha);
+	printf("\nVelocidad inicial del proyectil (m/s): ");
+	scanf("%f",&v0);//8 40 20 t = 0.522 5.376m 
+	//d = 27; //con estos parametros el objeto es alcanzado por el proyectil
+	//tetha = 30;
+	//v0 = 25;
 	
-	printf("\ntiempo:%f",t);
-	printf("\ny_chango:%f",y_chango);
-	printf("\ny_cazador:%f",y_cazador);
-	if(y_chango == y_cazador){
-		printf("\nEl chango sera alcanzado por la bala del cazador!");
-	}else{
-		printf("\nEl chango se salvo!");
-	}
+	tetha = tetha * (PI/180);
+	aux = cos(tetha);
+	t = d / (v0*(aux));
+
+	aux = tan(tetha);
+	y_chango = (d*(aux)) - (0.5*g*t*t);
+	
+	aux = sin(tetha);
+	y_cazador = ((v0*aux)*t)-((0.5)*g*(t*t));
+	
+	//redondear a dos decimales
+	aux = y_cazador*100;
+	aux_int = aux;
+	aux = (float)aux_int/100;
+	y_cazador = aux;
+	
+	aux = y_chango*100;
+	aux_int = aux;
+	aux = (float)aux_int/100;
+	y_chango = aux;
+	
+	if(y_chango == y_cazador && y_chango > 0 && y_cazador > 0)
+		printf("\nEl proyectil alcanzara al objeto");
+	else
+		printf("\nEl objeto no sera alcanzado por el proyectil");
+	
 	return 0;
 }
 

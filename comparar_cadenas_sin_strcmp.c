@@ -21,8 +21,8 @@ int main(int argc, char *argv[]) {
 			else f = 0;
 		}
 		
-		if(cad1[i] ==  cad2[i]) printf("\n son iguales");
-		else printf("son distintas");
+		if(cad1[i] ==  cad2[i]) printf("\nLas cadenas son iguales");
+		else printf("\nLas cadenas son distintas");
 	
 		/*
 			int i = 0;

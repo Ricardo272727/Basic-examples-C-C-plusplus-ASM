@@ -2,7 +2,13 @@
 #include <stdlib.h>
 #include <time.h>
 #include <ctype.h>
-int buscar_numero(int num,int moda[][2],int n){
+
+/* Calcula la moda de n numeros generados aleatoriamente,
+	utiliza una matriz de 2xn para guardar las ocurrencias de un
+	cierto numero */
+
+// busca un numero presente en la segunda columna de una  matriz de 2xn
+int buscar_numero(int num, int moda[][2], int n){
 	int i;
 	for(i=0;i<n;i++){
 		if(moda[i][0] == num) return i;
@@ -84,6 +90,7 @@ int main(int argc, char *argv[]) {
 			printf("\n\nOtra vez? S/N ");
 			while(getchar() != '\n');
 			scanf("%c",&op);
+			// hacer op mayuscula
 			op = toupper(op);
 		}while(op != 'S' && op != 'N');
 		
@@ -91,7 +98,6 @@ int main(int argc, char *argv[]) {
 			
 		
 	}
-	
 	
 	return 0;
 }

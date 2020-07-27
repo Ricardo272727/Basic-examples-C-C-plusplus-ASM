@@ -1,5 +1,3 @@
-
-
 section .data
   message db 'NASM course', 10
   size equ $-message
